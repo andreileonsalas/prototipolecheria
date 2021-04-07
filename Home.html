@@ -11,21 +11,33 @@
 </head>
 
 <body class="flex flex-col w-screen h-screen">
-    <h1>Menu Principal</h1><label>Nota: solo se mostraran los botones del cual el usuario tenga los permisos. Y si se
-        ingresa directamente a la url, el sistema le dara error 404</label>
-    <hr><a class="btn btn-primary" role="button" href="envioDeLeche.html">Enviar leche</a><a class="btn btn-primary"
-        role="button" href="recepcionDeLeche.html">Recibir leche</a><a class="btn btn-primary" role="button"
-        href="administracionDeBoletas.html">Administrar boletas</a>
-    <a class="btn btn-primary" role="button" href="administrarChofer.html">Administrar choferes</a><a
-        class="btn btn-primary" role="button" href="envioDeLeche.html">Administracion de proveedores</a><a
-        class="btn btn-primary" role="button" href="reportesDeGerencia.html">Administrar clientes</a><a
-        class="btn btn-primary" role="button" href="administracionDeQuesos.html">Administracion de creacion de
-        quesos</a><a class="btn btn-primary" role="button" href="pedirQuesos.html">Pedir quesos</a><a
-        class="btn btn-primary" role="button" href="reportesDeGerencia.html">Reportes</a>
-    <a class="btn btn-primary" role="button" href="reporteDeProduccion.html">Reporte de produccion</a><a
-        class="btn btn-primary" role="button" href="reporteDeControlDeCalidad.html">Reporte de control de calidad</a>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <nav class="shadow-lg px-4 py-2 flex justify-between items-center flex-col sm:flex-row">
+        <div class="flex text-xl items-center">
+            <div class="text-red-400 text-center text-4xl mr-4">
+                <i class="icon ion-ios-navigate"></i>
+            </div>
+            <label class="flex justify-center">Lecheria Mi Vaquita</label>
+        </div>
+        <a href="/index.html" class="text-gray-600 hover:text-gray-800 transition">Cerrar sesión</a>
+    </nav>
+    <div class="p-12">
+        <h1 class="text-4xl text-red-600 mb-2">Menu Principal</h1>
+        <hr class="mb-8">
+        <div class="flex flex-wrap mx-auto items-center justify-around">
+            <a class="w-72 text-center border border-red-700 rounded-lg bg-red-600 hover:bg-red-800 transition py-2 text-lg m-2 text-white" href="envioDeLeche.html">Enviar leche</a>
+            <a class="w-72 text-center border border-red-700 rounded-lg bg-red-600 hover:bg-red-800 transition py-2 text-lg m-2 text-white" href="recepcionDeLeche.html">Recibir leche</a>
+            <a class="w-72 text-center border border-red-700 rounded-lg bg-red-600 hover:bg-red-800 transition py-2 text-lg m-2 text-white" href="administracionDeBoletas.html">Administrar boletas</a>
+            <a class="w-72 text-center border border-red-700 rounded-lg bg-red-600 hover:bg-red-800 transition py-2 text-lg m-2 text-white" href="administrarChofer.html">Administrar choferes</a>
+            <a class="w-72 text-center border border-red-700 rounded-lg bg-red-600 hover:bg-red-800 transition py-2 text-lg m-2 text-white" href="envioDeLeche.html">Administracion de proveedores</a>
+            <a class="w-72 text-center border border-red-700 rounded-lg bg-red-600 hover:bg-red-800 transition py-2 text-lg m-2 text-white" href="reportesDeGerencia.html">Administrar clientes</a>
+            <a class="w-72 text-center border border-red-700 rounded-lg bg-red-600 hover:bg-red-800 transition py-2 text-lg m-2 text-white" href="administracionDeQuesos.html">Creacion de quesos</a>
+            <a class="w-72 text-center border border-red-700 rounded-lg bg-red-600 hover:bg-red-800 transition py-2 text-lg m-2 text-white" href="pedirQuesos.html">Pedir quesos</a>
+            <a class="w-72 text-center border border-red-700 rounded-lg bg-red-600 hover:bg-red-800 transition py-2 text-lg m-2 text-white" href="reportesDeGerencia.html">Reportes</a>
+            <a class="w-72 text-center border border-red-700 rounded-lg bg-red-600 hover:bg-red-800 transition py-2 text-lg m-2 text-white" href="reporteDeProduccion.html">Reporte de produccion</a>
+            <a class="w-72 text-center border border-red-700 rounded-lg bg-red-600 hover:bg-red-800 transition py-2 text-lg m-2 text-white" href="reporteDeControlDeCalidad.html">Reporte de control de calidad</a>
+        </div>
+
+    </div>
 </body>
 
 </html>
