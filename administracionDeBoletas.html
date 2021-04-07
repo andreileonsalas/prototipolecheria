@@ -4,51 +4,105 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Interfaz</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="manifest" href="manifest.json">
+    <title>Administración de boletas</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 
-<body>
-    <header>
-        <h1>Administracion de boletas</h1>
-    </header>
-    <div><label style="margin: 5px;">Buscar chofer</label>
-        <div style="margin: 10px;"></div><textarea style="margin: 5px;"></textarea></div>
-    <div><label style="margin: 5px;">Lista de boletas</label>
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Boleta</th>
-                        <th>Monto</th>
-                        <th>Se cobra?</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>500</td>
-                        <td><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>600</td>
-                        <td><input type="checkbox"></td>
-                    </tr>
-                </tbody>
-            </table>
+<body class="flex flex-col w-screen h-screen">
+    <nav class="shadow-lg px-4 py-2 flex justify-between items-center flex-col sm:flex-row">
+        <div class="flex text-xl items-center">
+            <div class="text-red-400 text-center text-4xl mr-4">
+                <i class="icon ion-ios-navigate"></i>
+            </div>
+            <label class="flex justify-center">Lecheria Mi Vaquita</label>
         </div>
-        <div style="margin: 10px;"></div>
+        <a href="/index.html" class="text-gray-600 hover:text-gray-800 transition">Cerrar sesión</a>
+    </nav>
+    <div class="p-12 flex-1 flex flex-col">
+        <div class="flex-1">
+            <h1 class="text-4xl text-red-600 mb-2">Administración de boletas</h1>
+            <hr class="mb-8">
+            <div class="mb-4">
+                <label class="text-gray-700 text-xl">Buscar por chofer</label>
+                <input class="transition border border-gray-200 px-4 py-2 w-full rounded hover:border-gray-600"></input>
+            </div>
+            <div>
+                <label class="text-gray-700 text-xl mb-2">Lista de boletas</label>
+                <div class="flex flex-wrap gap-6">
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Id</h2>
+                            <h2>Monto</h2>
+                            <h2>Cobradad</h2>
+                        </div>
+                        <div>
+                            <div><strong>21534125</strong></div>
+                            <div><strong>60014</strong></div>
+                            <div><strong>Si</strong></div>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Id</h2>
+                            <h2>Monto</h2>
+                            <h2>Cobradad</h2>
+                        </div>
+                        <div>
+                            <div><strong>21534125</strong></div>
+                            <div><strong>60014</strong></div>
+                            <div><strong>No</strong></div>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Id</h2>
+                            <h2>Monto</h2>
+                            <h2>Cobradad</h2>
+                        </div>
+                        <div>
+                            <div><strong>21534125</strong></div>
+                            <div><strong>60014</strong></div>
+                            <div><strong>Si</strong></div>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Id</h2>
+                            <h2>Monto</h2>
+                            <h2>Cobradad</h2>
+                        </div>
+                        <div>
+                            <div><strong>21534125</strong></div>
+                            <div><strong>60014</strong></div>
+                            <div><strong>Si</strong></div>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Id</h2>
+                            <h2>Monto</h2>
+                            <h2>Cobradad</h2>
+                        </div>
+                        <div>
+                            <div><strong>21534125</strong></div>
+                            <div><strong>60014</strong></div>
+                            <div><strong>No</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-between mt-12 flex-col-reverse items-center justify-center sm:flex-row">
+            <a href="Home.html" class="text-gray-700 text-xl">Volver al menu</a>
+            <a href="reciboDeTiquete.html"
+                class="px-12 m-2 sm:m-0 text-xl bg-red-400 text-white text-center rounded-lg py-2 transition hover:bg-red-500">Generar reporte</a>
+            <a href="reciboDeTiquete.html"
+                class="px-12 text-xl bg-red-400 text-white text-center rounded-lg py-2 transition hover:bg-red-500">Notificar mecanicos</a>
+        </div>
     </div>
-    <div class="btn-group" role="group"><button class="btn btn-primary" type="button">Generar reporte</button><a class="btn btn-primary" role="button" href="reciboDeTiquete.html">Notificar mecanicos</a></div>
-    <hr>
-    <div class="btn-group" role="group"><a class="btn btn-primary" role="button" href="Home.html">Home</a></div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
