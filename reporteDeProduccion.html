@@ -4,56 +4,60 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Interfaz</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="manifest" href="manifest.json">
+    <title>Reporte de produccion</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 
-<body>
-    <header>
-        <h1>Reporte de produccion</h1>
-    </header>
-    <div>
-        <div style="margin: 10px;"></div><label style="margin: 5px;">Buscar producto</label><textarea style="margin: 5px;"></textarea></div>
-    <div><label style="margin: 5px;">Reporte de produccion</label>
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Leche recibida</th>
-                        <th>Fecha de inicio de produccion</th>
-                        <th>Fecha de entrega</th>
-                        <th>Porcentaje Producido</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>queso cheddar</td>
-                        <td>Si</td>
-                        <td>1/1/2021</td>
-                        <td>1/1/2022</td>
-                        <td>25%</td>
-                    </tr>
-                    <tr>
-                        <td>queso palmito</td>
-                        <td>No</td>
-                        <td>1/1/2021</td>
-                        <td>1/1/2022</td>
-                        <td>0%</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div><button class="btn btn-primary" type="button">Descargar reporte</button>
-        <div style="margin: 10px;"></div>
+<body class="flex flex-col w-screen h-screen">
+    <nav class="shadow-lg px-4 py-2 flex justify-between items-center flex-col sm:flex-row">
+        <div class="flex text-xl items-center">
+            <div class="text-red-400 text-center text-4xl mr-4">
+                <i class="icon ion-ios-navigate"></i>
+            </div>
+            <label class="flex justify-center">Lecheria Mi Vaquita</label>
+        </div>
+        <a href="/index.html" class="text-gray-600 hover:text-gray-800 transition">Cerrar sesión</a>
+    </nav>
+    
+    <div class="p-12 flex-1 flex flex-col">
+        <div class="flex-1">
+            <h1 class="text-4xl text-red-600 mb-2">Reporte de produccion</h1>
+            <hr class="mb-8">
+            <div class="mb-4">
+                <label class="text-gray-700 text-xl">Buscar proveedor</label>
+                <input class="transition border border-gray-200 px-4 py-2 w-full rounded hover:border-gray-600"></input>
+            </div>
+            <div>
+                <label class="text-gray-700 text-xl mb-2">Reporte de producción</label>
+                <div class="flex flex-wrap gap-6">
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Producto</h2>
+                            <h2>Leche recibida</h2>
+                            <h2>Fecha de inicio de produccion</h2>
+                            <h2>Fecha de entrega</h2>
+                            <h2>Porcentaje Producido</h2>
+                        </div>
+                        <div>
+                            <div><strong>21534125</strong></div>
+                            <div><strong>Si</strong></div>
+                            <div><strong>11/11/2020</strong></div>
+                            <div><strong>18/12/2020</strong></div>
+                            <div><strong>32%</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-between gap-2 mt-12 flex-col-reverse items-center justify-center sm:flex-row">
+            <a href="Home.html" class="text-gray-700 text-xl">Volver al menu</a>
+            <a href="reciboDeTiquete.html"
+                class="px-12 m-2 sm:m-0 text-xl bg-red-400 text-white text-center rounded-lg py-2 transition hover:bg-red-500">Descarga reporte</a>
+        </div>
     </div>
-    <hr>
-    <div class="btn-group" role="group"><a class="btn btn-primary" role="button" href="Home.html">Home</a></div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
