@@ -4,116 +4,230 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Interfaz</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="manifest" href="manifest.json">
+    <title>Reporte de gerencia</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 
-<body>
-    <header>
-        <h1>Reportes de gerencia</h1>
-    </header>
-    <div>
-        <div style="margin: 10px;"></div><label style="margin: 5px;">Buscar cliente</label><textarea style="margin: 5px;"></textarea></div>
-    <div><label style="margin: 5px;">Reporte de cliente</label>
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Cliente</th>
-                        <th>Detalle</th>
-                        <th>Cuenta por pagar</th>
-                        <th>Leche recuperada</th>
-                        <th>Porcentaje de ganancia</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Leche 1</td>
-                        <td>500</td>
-                        <td>2L</td>
-                        <td>500%</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Leche 2</td>
-                        <td>600</td>
-                        <td>3L</td>
-                        <td>3%</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div><button class="btn btn-primary" type="button">Descargar reporte</button>
-        <div style="margin: 10px;"></div>
-    </div>
-    <div>
-        <div style="margin: 10px;"></div><label style="margin: 5px;">Buscar proveedor</label><textarea style="margin: 5px;"></textarea></div>
-    <div><label style="margin: 5px;">Reporte de proveedor</label>
-        <div style="margin: 10px;">
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Proveedor</th>
-                            <th>Detalle</th>
-                            <th>Cuenta por pagar</th>
-                            <th>Pago realizado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Viaje 1</td>
-                            <td>500</td>
-                            <td>500</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Servicios profesionales</td>
-                            <td>600</td>
-                            <td>600</td>
-                        </tr>
-                    </tbody>
-                </table>
+<body class="flex flex-col w-screen h-screen">
+    <nav class="shadow-lg px-4 py-2 flex justify-between items-center flex-col sm:flex-row">
+        <div class="flex text-xl items-center">
+            <div class="text-red-400 text-center text-4xl mr-4">
+                <i class="icon ion-ios-navigate"></i>
             </div>
-        </div><button class="btn btn-primary" type="button">Descargar reporte</button>
-        <div>
-            <div style="margin: 10px;"></div><label style="margin: 5px;">Buscar producto</label><textarea style="margin: 5px;"></textarea></div>
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                        <th>Inventario</th>
-                        <th>Utilidad</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Queso</td>
-                        <td>100</td>
-                        <td>500</td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>Frescoleche</td>
-                        <td>150</td>
-                        <td>600</td>
-                        <td>35</td>
-                    </tr>
-                </tbody>
-            </table>
+            <label class="flex justify-center">Lecheria Mi Vaquita</label>
         </div>
-    </div><button class="btn btn-primary" type="button">Descargar reporte</button>
-    <hr>
-    <div class="btn-group" role="group"><a class="btn btn-primary" role="button" href="Home.html">Home</a></div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <a href="/index.html" class="text-gray-600 hover:text-gray-800 transition">Cerrar sesión</a>
+    </nav>
+    
+    <div class="p-12 flex-1 flex flex-col">
+        <div class="flex-1">
+            <h1 class="text-4xl text-red-600 mb-2">Reporte de gerencia</h1>
+            <hr class="mb-8">
+            <div class="mb-4">
+                <label class="text-gray-700 text-xl">Buscar cliente</label>
+                <input class="transition border border-gray-200 px-4 py-2 w-full rounded hover:border-gray-600"></input>
+            </div>
+            <div>
+                <label class="text-gray-700 text-xl mb-2">Reportes de cliente</label>
+                <div class="flex flex-wrap gap-6">
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Cliente</h2>
+                            <h2>Detalle</h2>
+                            <h2>Cuenta por pagar</h2>
+                            <h2>Leche recuperada</h2>
+                            <h2>Porcentaje de ganancia</h2>
+                        </div>
+                        <div>
+                            <h2><strong>21482190</strong></h2>
+                            <h2><strong>Venta de leche</strong></h2>
+                            <h2><strong>$1401</strong></h2>
+                            <h2><strong>104%</strong></h2>
+                            <h2><strong>62%</strong></h2>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Cliente</h2>
+                            <h2>Detalle</h2>
+                            <h2>Cuenta por pagar</h2>
+                            <h2>Leche recuperada</h2>
+                            <h2>Porcentaje de ganancia</h2>
+                        </div>
+                        <div>
+                            <h2><strong>21482190</strong></h2>
+                            <h2><strong>Venta de leche</strong></h2>
+                            <h2><strong>$1401</strong></h2>
+                            <h2><strong>104%</strong></h2>
+                            <h2><strong>62%</strong></h2>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Cliente</h2>
+                            <h2>Detalle</h2>
+                            <h2>Cuenta por pagar</h2>
+                            <h2>Leche recuperada</h2>
+                            <h2>Porcentaje de ganancia</h2>
+                        </div>
+                        <div>
+                            <h2><strong>21482190</strong></h2>
+                            <h2><strong>Venta de leche</strong></h2>
+                            <h2><strong>$1401</strong></h2>
+                            <h2><strong>104%</strong></h2>
+                            <h2><strong>62%</strong></h2>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Cliente</h2>
+                            <h2>Detalle</h2>
+                            <h2>Cuenta por pagar</h2>
+                            <h2>Leche recuperada</h2>
+                            <h2>Porcentaje de ganancia</h2>
+                        </div>
+                        <div>
+                            <h2><strong>21482190</strong></h2>
+                            <h2><strong>Venta de leche</strong></h2>
+                            <h2><strong>$1401</strong></h2>
+                            <h2><strong>104%</strong></h2>
+                            <h2><strong>62%</strong></h2>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Cliente</h2>
+                            <h2>Detalle</h2>
+                            <h2>Cuenta por pagar</h2>
+                            <h2>Leche recuperada</h2>
+                            <h2>Porcentaje de ganancia</h2>
+                        </div>
+                        <div>
+                            <h2><strong>21482190</strong></h2>
+                            <h2><strong>Venta de leche</strong></h2>
+                            <h2><strong>$1401</strong></h2>
+                            <h2><strong>104%</strong></h2>
+                            <h2><strong>62%</strong></h2>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Cliente</h2>
+                            <h2>Detalle</h2>
+                            <h2>Cuenta por pagar</h2>
+                            <h2>Leche recuperada</h2>
+                            <h2>Porcentaje de ganancia</h2>
+                        </div>
+                        <div>
+                            <h2><strong>21482190</strong></h2>
+                            <h2><strong>Venta de leche</strong></h2>
+                            <h2><strong>$1401</strong></h2>
+                            <h2><strong>104%</strong></h2>
+                            <h2><strong>62%</strong></h2>
+                        </div>
+                    </div>
+                </div>
+                <label class="block text-gray-700 text-xl mt-4 mb-2">Reportes de proveedor</label>
+                <div class="flex flex-wrap gap-6">
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Proveedor</h2>
+                            <h2>Detalle</h2>
+                            <h2>Cuenta por pagar</h2>
+                            <h2>Pago realizado</h2>
+                        </div>
+                        <div>
+                            <h2><strong>21482190</strong></h2>
+                            <h2><strong>Venta de leche</strong></h2>
+                            <h2><strong>$1401</strong></h2>
+                            <h2><strong>Si</strong></h2>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Proveedor</h2>
+                            <h2>Detalle</h2>
+                            <h2>Cuenta por pagar</h2>
+                            <h2>Pago realizado</h2>
+                        </div>
+                        <div>
+                            <h2><strong>21482190</strong></h2>
+                            <h2><strong>Venta de leche</strong></h2>
+                            <h2><strong>$1401</strong></h2>
+                            <h2><strong>Si</strong></h2>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Proveedor</h2>
+                            <h2>Detalle</h2>
+                            <h2>Cuenta por pagar</h2>
+                            <h2>Pago realizado</h2>
+                        </div>
+                        <div>
+                            <h2><strong>21482190</strong></h2>
+                            <h2><strong>Venta de leche</strong></h2>
+                            <h2><strong>$1401</strong></h2>
+                            <h2><strong>Si</strong></h2>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Proveedor</h2>
+                            <h2>Detalle</h2>
+                            <h2>Cuenta por pagar</h2>
+                            <h2>Pago realizado</h2>
+                        </div>
+                        <div>
+                            <h2><strong>21482190</strong></h2>
+                            <h2><strong>Venta de leche</strong></h2>
+                            <h2><strong>$1401</strong></h2>
+                            <h2><strong>Si</strong></h2>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Proveedor</h2>
+                            <h2>Detalle</h2>
+                            <h2>Cuenta por pagar</h2>
+                            <h2>Pago realizado</h2>
+                        </div>
+                        <div>
+                            <h2><strong>21482190</strong></h2>
+                            <h2><strong>Venta de leche</strong></h2>
+                            <h2><strong>$1401</strong></h2>
+                            <h2><strong>Si</strong></h2>
+                        </div>
+                    </div>
+                </div>
+                <label class="block text-gray-700 text-xl mt-4 mb-2">Reportes de productos</label>
+                <div class="flex flex-wrap gap-6">
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Producto</h2>
+                            <h2>Precio</h2>
+                            <h2>Inventario</h2>
+                            <h2>Utilidad</h2>
+                        </div>
+                        <div>
+                            <h2><strong>21482190</strong></h2>
+                            <h2><strong>$940</strong></h2>
+                            <h2><strong>1301</strong></h2>
+                            <h2><strong>43</strong></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-between mt-12 flex-col-reverse items-center justify-center sm:flex-row">
+            <a href="Home.html" class="text-gray-700 text-xl">Volver al menu</a>
+            <a href="reciboDeTiquete.html"
+                class="px-12 m-2 sm:m-0 text-xl bg-red-400 text-white text-center rounded-lg py-2 transition hover:bg-red-500">Descargar reportes</a>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -4,56 +4,101 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Interfaz</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="manifest" href="manifest.json">
+    <title>Administracion de creacion de quesos</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 
-<body>
-    <header>
-        <h1>Administracion de creacion de quesos</h1>
-    </header>
-    <div>
-        <div style="margin: 10px;"></div><label style="margin: 5px;">Buscar calidad leche</label><textarea style="margin: 5px;"></textarea>
-        <div><label style="margin: 5px;">Cuentas por cobrar</label>
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Proveedor</th>
-                            <th>Precio</th>
-                            <th>Seleccionar leche</th>
-                            <th>Calidad de leche</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>250</td>
-                            <td><button class="btn btn-primary" type="button">Seleccionar</button></td>
-                            <td>99%</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>300</td>
-                            <td><button class="btn btn-primary" type="button">Seleccionar</button></td>
-                            <td>45%</td>
-                        </tr>
-                    </tbody>
-                </table>
+<body class="flex flex-col w-screen h-screen">
+    <nav class="shadow-lg px-4 py-2 flex justify-between items-center flex-col sm:flex-row">
+        <div class="flex text-xl items-center">
+            <div class="text-red-400 text-center text-4xl mr-4">
+                <i class="icon ion-ios-navigate"></i>
             </div>
-            <div style="margin: 10px;"></div>
+            <label class="flex justify-center">Lecheria Mi Vaquita</label>
         </div>
-        <div style="margin: 10px;"></div><label style="margin: 5px;">Queso para el que se hara</label><textarea style="margin: 5px;"></textarea><label style="margin: 5px;">Litros a comprar</label><textarea style="margin: 5px;"></textarea>
-        <div style="margin: 10px;"></div>
-    </div><button class="btn btn-primary" type="button">Registrar pedido</button>
-    <hr>
-    <div class="btn-group" role="group"><a class="btn btn-primary" role="button" href="Home.html">Home</a></div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <a href="/index.html" class="text-gray-600 hover:text-gray-800 transition">Cerrar sesión</a>
+    </nav>
+    <div class="p-12 flex-1 flex flex-col">
+        <div class="flex-1">
+            <h1 class="text-4xl text-red-600 mb-2">Administracion de creacion de quesos</h1>
+            <hr class="mb-8">
+            <div class="mb-4">
+                <label class="text-gray-700 text-xl">Buscar calidad de leche</label>
+                <input class="transition border border-gray-200 px-4 py-2 w-full rounded hover:border-gray-600"></input>
+            </div>
+            <div>
+                <label class="text-gray-700 text-xl mb-2">Proveedores</label>
+                <div class="flex flex-wrap gap-6">
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Proveedor</h2>
+                            <h2>Precio</h2>
+                            <h2>Calidad de leche</h2>
+                        </div>
+                        <div>
+                            <div><strong>21534125</strong></div>
+                            <div><strong>$583</strong></div>
+                            <div><strong>89%</strong></div>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Proveedor</h2>
+                            <h2>Precio</h2>
+                            <h2>Calidad de leche</h2>
+                        </div>
+                        <div>
+                            <div><strong>21534125</strong></div>
+                            <div><strong>$583</strong></div>
+                            <div><strong>89%</strong></div>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Proveedor</h2>
+                            <h2>Precio</h2>
+                            <h2>Calidad de leche</h2>
+                        </div>
+                        <div>
+                            <div><strong>21534125</strong></div>
+                            <div><strong>$583</strong></div>
+                            <div><strong>89%</strong></div>
+                        </div>
+                    </div>
+                    <div class="shadow-lg p-4 cursor-pointer flex gap-2 border border-gray-200 transition hover:bg-gray-100 hover:border-gray-800">
+                        <div>
+                            <h2>Proveedor</h2>
+                            <h2>Precio</h2>
+                            <h2>Calidad de leche</h2>
+                        </div>
+                        <div>
+                            <div><strong>21534125</strong></div>
+                            <div><strong>$583</strong></div>
+                            <div><strong>89%</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="my-4">
+                <label class="text-gray-700 text-xl">Queso para el que se hara</label>
+                <input class="transition border border-gray-200 px-4 py-2 w-full rounded hover:border-gray-600"></input>
+            </div>
+            
+            <div class="mb-4">
+                <label class="text-gray-700 text-xl">Litros a comprar</label>
+                <input class="transition border border-gray-200 px-4 py-2 w-full rounded hover:border-gray-600"></input>
+            </div>
+        </div>
+
+        <div class="flex justify-between mt-12 flex-col-reverse items-center justify-center sm:flex-row">
+            <a href="Home.html" class="text-gray-700 text-xl">Volver al menu</a>
+            <a href="reciboDeTiquete.html"
+                class="px-12 text-xl bg-red-400 text-white text-center rounded-lg py-2 transition hover:bg-red-500">Registrar petido</a>
+        </div>
+    </div>
 </body>
 
 </html>
