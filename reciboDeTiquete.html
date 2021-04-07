@@ -4,24 +4,34 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Interfaz</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="manifest" href="manifest.json">
+    <title>Recibo de tiquete</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 
-<body>
-    <header>
-        <h1>Su numero de rastreo es:</h1>
-    </header>
-    <div><label style="margin: 5px;">555555</label>
-        <div style="margin: 10px;"></div>
+<body class="flex flex-col w-screen h-screen">
+    <nav class="shadow-lg px-4 py-2 flex justify-between items-center flex-col sm:flex-row">
+        <div class="flex text-xl items-center">
+            <div class="text-red-400 text-center text-4xl mr-4">
+                <i class="icon ion-ios-navigate"></i>
+            </div>
+            <label class="flex justify-center">Lecheria Mi Vaquita</label>
+        </div>
+        <a href="/index.html" class="text-gray-600 hover:text-gray-800 transition">Cerrar sesión</a>
+    </nav>
+    <div class="p-12 flex-1 flex flex-col">
+        <div class="flex-1">
+            <h1 class="text-4xl text-red-600 mb-2">Número de rastreo</h1>
+            <hr class="mb-8">
+            <div class="text-gray-700 text-xl">Su número de rastreo es <strong>565145</strong></div>
+        </div>
+
+        <div class="flex justify-between mt-12 flex-col-reverse items-center justify-center sm:flex-row">
+            <a href="Home.html" class="text-gray-700 text-xl">Volver al menu</a>
+            <div></div>
+        </div>
     </div>
-    <div class="btn-group" role="group"><a class="btn btn-primary" role="button" href="Home.html">Home</a></div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
