@@ -4,30 +4,48 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Interfaz</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="manifest" href="manifest.json">
+    <title>Pedir queso</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 
-<body>
-    <header>
-        <h1>Pedir queso</h1>
-    </header>
-    <div>
-        <div style="margin: 10px;"></div><label style="margin: 5px;">Buscar queso</label><textarea style="margin: 5px;"></textarea>
-        <div><label style="margin: 5px;">Si no recoge el queso antes de la fecha de expiracion, no podra retirarlo y no se le retornara el dinero</label>
-            <div style="margin: 10px;"></div>
+<body class="flex flex-col w-screen h-screen">
+    <nav class="shadow-lg px-4 py-2 flex justify-between items-center flex-col sm:flex-row">
+        <div class="flex text-xl items-center">
+            <div class="text-red-400 text-center text-4xl mr-4">
+                <i class="icon ion-ios-navigate"></i>
+            </div>
+            <label class="flex justify-center">Lecheria Mi Vaquita</label>
+        </div>
+        <a href="/index.html" class="text-gray-600 hover:text-gray-800 transition">Cerrar sesión</a>
+    </nav>
+    <div class="p-12 flex-1 flex flex-col">
+        <div class="flex-1">
+            <h1 class="text-4xl text-red-600 mb-2">Pedir queso</h1>
+            <hr class="mb-8">
+            <div class="mb-4">
+                <label class="text-gray-700 text-xl">Buscar queso</label>
+                <input class="transition border border-gray-200 px-4 py-2 w-full rounded hover:border-gray-600"></input>
+                <p>Si no recoge el queso antes de la fecha de expiracion, no podra retirarlo y no se le retornara el dinero</p>
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700 text-xl">Precio</label>
+                <input class="transition border border-gray-200 px-4 py-2 w-full rounded hover:border-gray-600"></input>
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700 text-xl">Fecha de expiracion</label>
+                <input class="transition border border-gray-200 px-4 py-2 w-full rounded hover:border-gray-600"
+                    type="date"></input>
+            </div>
+        </div>
+
+        <div class="flex justify-between mt-12 flex-col-reverse items-center justify-center sm:flex-row">
+            <a href="Home.html" class="text-gray-700 text-xl">Volver al menu</a>
+            <a href="reciboDeTiquete.html"
+                class="px-12 text-xl bg-red-400 text-white text-center rounded-lg py-2 transition hover:bg-red-500">Pedir</a>
         </div>
     </div>
-    <div style="margin: 10px;"><label style="margin: 5px;">Fecha de expiracion</label><input type="date" readonly=""></div>
-    <div style="margin: 10px;"><label style="margin: 5px;">Precio</label><label style="margin: 5px;">$500</label></div><button class="btn btn-primary" type="button">Solicitar queso</button>
-    <hr>
-    <div class="btn-group" role="group"><a class="btn btn-primary" role="button" href="Home.html">Home</a></div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
