@@ -71,3 +71,7 @@
   border-radius: 12px;
 }
 
+textarea {
+  width: 95%;
+}
+
