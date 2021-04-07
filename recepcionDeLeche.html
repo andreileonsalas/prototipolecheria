@@ -4,36 +4,67 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Interfaz</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="manifest" href="manifest.json">
+    <title>Recepción de leche</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 
-<body>
-    <header>
-        <h1>Recepcion de leche</h1>
-    </header>
-    <div><label style="margin: 5px;">Litros de leche</label>
-        <div style="margin: 10px;"></div><textarea style="margin: 5px;"></textarea></div>
-    <div><label style="margin: 5px;">Fecha y hora</label>
-        <div style="margin: 10px;"></div><input type="date"></div>
-    <div><label style="margin: 5px;">ID</label>
-        <div style="margin: 10px;"></div><textarea style="margin: 5px;"></textarea>
-        <div><label style="margin: 5px;">Tipo de ruta</label>
-            <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Asfalto</label></div>
-            <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Lastre</label></div>
+<body class="flex flex-col w-screen h-screen">
+    <nav class="shadow-lg px-4 py-2 flex justify-between items-center flex-col sm:flex-row">
+        <div class="flex text-xl items-center">
+            <div class="text-red-400 text-center text-4xl mr-4">
+                <i class="icon ion-ios-navigate"></i>
+            </div>
+            <label class="flex justify-center">Lecheria Mi Vaquita</label>
+        </div>
+        <a href="/index.html" class="text-gray-600 hover:text-gray-800 transition">Cerrar sesión</a>
+    </nav>
+    <div class="p-12 flex-1 flex flex-col">
+        <div class="flex-1">
+            <h1 class="text-4xl text-red-600 mb-2">Recepción de leche</h1>
+            <hr class="mb-8">
+            <div class="mb-4">
+                <label class="text-gray-700 text-xl">Id</label>
+                <input class="transition border border-gray-200 px-4 py-2 w-full rounded hover:border-gray-600"></input>
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700 text-xl">Litros de leche</label>
+                <input class="transition border border-gray-200 px-4 py-2 w-full rounded hover:border-gray-600"></input>
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700 text-xl">Fecha y hora</label>
+                <input class="transition border border-gray-200 px-4 py-2 w-full rounded hover:border-gray-600" type="date"></input>
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700 text-xl">Tipo de ruta</label>
+                <div>
+                    <input class="form-check-input" type="radio" id="formCheck-1">
+                    <label class="form-check-label" for="formCheck-1">Asfalto</label>
+                </div>
+                <div>
+                    <input class="form-check-input" type="radio" id="formCheck-2">
+                    <label class="form-check-label" for="formCheck-2">Lastre</label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700 text-xl">Distancia</label>
+                <input class="transition border border-gray-200 px-4 py-2 w-full rounded hover:border-gray-600"></input>
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700 text-xl">Número de boleta por cobrar (se muestra si aplica)</label>
+                <input class="transition border border-gray-200 px-4 py-2 w-full rounded hover:border-gray-600"></input>
+            </div>
+        </div>
+
+        <div class="flex justify-between mt-12 flex-col-reverse items-center justify-center sm:flex-row">
+            <a href="Home.html" class="text-gray-700 text-xl">Volver al menu</a>
+            <a href="reciboDeTiquete.html"
+                class="px-12 text-xl bg-red-400 text-white text-center rounded-lg py-2 transition hover:bg-red-500">Enviar</a>
         </div>
     </div>
-    <div><label style="margin: 5px;">Distancia</label>
-        <div style="margin: 10px;"></div><textarea style="margin: 5px;"></textarea></div>
-    <div><label style="margin: 5px;">#boleta por cobrar (se muestra si aplica)</label>
-        <div style="margin: 10px;"></div><textarea style="margin: 5px;"></textarea></div>
-    <div class="btn-group" role="group"><a class="btn btn-primary" role="button" href="Home.html">Home</a><a class="btn btn-primary" role="button" href="reciboDeTiquete.html">Enviar</a></div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
 </body>
 
 </html>
